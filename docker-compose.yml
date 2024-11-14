@@ -1,0 +1,20 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    environment:
+      MANUAL: "Y"
+      RAM_SIZE: "8G"
+      CPU_CORES: "3"
+    devices:
+      - /dev/kvm
+    volumes:
+      - /tmp:/data
+      - /tmp/ubuntu-24.04.1-desktop-amd64.iso:/custom.iso
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    stop_grace_period: 2m
