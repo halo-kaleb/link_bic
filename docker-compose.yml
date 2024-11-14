@@ -10,7 +10,7 @@ services:
       - /dev/kvm
     volumes:
       - /tmp:/data
-      - /tmp/ubuntu-24.04.1-desktop-amd64.iso:/custom.iso
+      - /tmp/en_windows_8.1_with_update_x64_dvd_6051480.iso:/custom.iso
     cap_add:
       - NET_ADMIN
     ports:
